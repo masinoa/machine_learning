@@ -5,5 +5,9 @@ This repo contains a collection of IPython notebooks detailing various machine l
 
 Each ipynb provides a list of the pertinent reading material. It is suggested that the material be read in the order provided.
 
-If you do not have IPython installed or Notebook configured (why not?) the PDF output files are in this repository's Downloads section. However, they are not always as updated as the src.
+If you do not have IPython installed or Notebook configured (why not?) the src directory has .py versions of the notebook files and some of the PDF output files are in this repository's Downloads section. However, they are not always as updated as the ipynb files.
+
+Python Version 2.7.2
+IPython Version 0.13
+
 
