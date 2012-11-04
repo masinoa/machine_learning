@@ -1,0 +1,23 @@
+A retrospective sample of males in a heart-disease high-risk region
+of the Western Cape, South Africa. There are roughly two controls per
+case of CHD. Many of the CHD positive men have undergone blood
+pressure reduction treatment and other programs to reduce their risk
+factors after their CHD event. In some cases the measurements were
+made after these treatments. These data are taken from a larger
+dataset, described in  Rousseauw et al, 1983, South African Medical
+Journal. 
+
+sbp		systolic blood pressure
+tobacco		cumulative tobacco (kg)
+ldl		low densiity lipoprotein cholesterol
+adiposity
+famhist		family history of heart disease (Present, Absent)
+typea		type-A behavior
+obesity
+alcohol		current alcohol consumption
+age		age at onset
+chd		response, coronary heart disease
+
+To read into R:
+read.table("http://www-stat.stanford.edu/~tibs/ElemStatLearn/datasets/SAheart.data",
+	sep=",",head=T,row.names=1)
