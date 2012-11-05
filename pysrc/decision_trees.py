@@ -96,7 +96,7 @@ def __grow_path(tree, coords, input, output, clazz, split_func, max_rm, meta, da
 			if len(out1)>0 and len(out2)>0:
 				temp1 = split_func(out1, clazz) + split_func(out2, clazz)
 				temp2 = math.fabs(len(out1)-len(out2))
-				if temp1 < min_split or (temp1 == min_split and temp2) < min_balance:
+				if temp1 <= min_split and temp2 <= min_balance:
 					split_j = col
 					split_i = idx
 					min_split = temp1
@@ -151,9 +151,6 @@ def build_tree(input, output, clazz, meta, split_func=cross_entropy, max_rm=5):
 		is less or equal to s and those with weight 1 are for those greater than s. 	
 	'''
 	tree = nx.DiGraph()
-	#tree.add_node('0,0') #this is the root node
-	#tree.node['0,0']['data'] = range(len(output))
-	#tree.node['0,0']['o'] = __assign_class(tree, '0,0', clazz, output)
 	__grow_path(tree, '0,0', input, output, clazz, split_func, max_rm, meta, range(len(output)))
 	return tree
 	
